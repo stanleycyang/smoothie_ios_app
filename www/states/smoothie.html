@@ -1,10 +1,10 @@
-<ion-view view-title="Smoothies" ng-controller="ApplicationController as app">
+<ion-view ng-controller="ApplicationController as app" view-title="{{app.smoothie.name}}">
   <ion-content>
   	
 
     <div class="list card">
       <div class="item item-avatar">
-        <img src="img/smoothie.jpg">
+        <img src="img/onesmoothie.jpg">
         <h2>{{app.smoothie.name}}</h2>
         <p>{{app.smoothie.calories}} calories</p>
       </div>
