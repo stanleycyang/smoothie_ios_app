@@ -27,8 +27,7 @@ angular.module('smoothie_app', ['ionic'])
       .state('app', {
         url: '/app',
         abstract: true,
-        templateUrl: 'states/menu.html',
-        controller: 'ApplicationController'
+        templateUrl: 'states/menu.html'
       })
 
       .state('app.smoothies', {
@@ -36,6 +35,15 @@ angular.module('smoothie_app', ['ionic'])
         views: {
           'menuContent': {
             templateUrl: "states/smoothies.html"
+          }
+        }
+      })
+
+      .state('app.smoothie', {
+          url: "/smoothies/:smoothieId",
+        views: {
+          'menuContent': {
+            templateUrl: "states/smoothie.html"
           }
         }
       })
@@ -55,7 +63,7 @@ angular.module('smoothie_app', ['ionic'])
             templateUrl: "states/history.html"
           }
         }
-      })
+      });
     $urlRouterProvider.otherwise('/app/smoothies');
 
   });
